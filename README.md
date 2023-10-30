@@ -4,6 +4,7 @@
 - Configured tailwind
 - Header
 - login Form
+- signup form 
 
 # Features 
 - Login/Sign Up
