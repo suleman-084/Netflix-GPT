@@ -9,8 +9,10 @@
 - Form validation 
 - useRef hook
 - firebase setup
-- deploying our app to production
+- deploying our app to productionpm startn
 - create signup user account
+- implemente sign in user api
+- created redux store with userslice
 
 # Features 
 - Login/Sign Up

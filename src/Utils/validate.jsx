@@ -1,4 +1,4 @@
-import React from 'react'
+
 
 export const checkValidData = (email, password, name) => {
     const isEmailValid = /^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/.test(email)

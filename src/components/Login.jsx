@@ -3,26 +3,70 @@ import Header from './Header'
 import { background_img } from '../Utils/constants'
 import { checkValidData } from '../Utils/validate'
 import { useRef } from 'react'
+import { auth } from "../Utils/firebase"
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { Navigate, useNavigate } from 'react-router-dom'
+
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true)
-  const [errorMessage, setErrorMessage]= useState(null)
+  const [errorMessage, setErrorMessage] = useState(null)
+  const navigate = useNavigate()
   const emailRef = useRef(null)
   const passwordRef = useRef(null)
   const nameRef = useRef(null)
   const handleButtonClick = () => {
     //validateform
-    // checkValidData(email,password)
+    // console.log("clicked");
     // console.log("email", email.current.value);
-    // console.log("pw", password.current.value);
-    // console.log("pw", name.current.value);
+
     const message = checkValidData(emailRef?.current?.value, passwordRef?.current?.value, nameRef?.current?.value)
     // console.log("msg", message);
     setErrorMessage(message)
+    if (message) return;
+    if (!isSignInForm) {
+      // console.log("is", isSignInForm);
+      //sign up logic
+      createUserWithEmailAndPassword(auth, emailRef?.current?.value, passwordRef?.current?.value)
+        .then((userCredential) => {
+          // Signed up 
+          const user = userCredential.user;
+          // console.log("user", user);
+          navigate("/browse")
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          setErrorMessage(errorCode + "-" + errorMessage)
+          // ..
+        });
+    } else {
+    
 
+      //sign in logic
+      // console.log("is", isSignInForm);
+      signInWithEmailAndPassword(auth, emailRef?.current?.value, passwordRef?.current?.value)
+        .then((userCredential) => {
+          // Signed in 
+          const user = userCredential.user;
+          // console.log("user", user);
+          navigate("/browse")
+
+
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          setErrorMessage(errorCode + "-" + errorMessage)
+        });
+
+    }
   }
+
   const toggleSignInForm = () => {
-    setIsSignInForm(!isSignInForm)
+    setIsSignInForm(prev => !prev)
+  // console.log("is sigsn", isSignInForm);
+    // setIsSignInForm(!isSignInForm) : Bad approach
 
   }
   return (
@@ -36,7 +80,7 @@ const Login = () => {
         <input ref={emailRef} type="email" placeholder="Email Address" className="p-4 my-4 w-full bg-[#333333] rounded-lg" />
         <input ref={passwordRef} type="Password" placeholder="Password" className="p-4 my-4  w-full bg-[#333333] rounded-lg" />
         <p className="text-red-500 font-bold text-lg py-2">{errorMessage}</p>
-        <button className="p-4 my-6  bg-red-700 text-white rounded-lg w-full " onClick={handleButtonClick}>Sign In</button>
+        <button className="p-4 my-6  bg-red-700 text-white rounded-lg w-full " onClick={handleButtonClick}>{isSignInForm ? "Sign In" : "Sign Up"}</button>
         <p className='py-4 cursor-pointer' onClick={toggleSignInForm}>{isSignInForm ? "New to Netflix? Sign up now" : "Already registered!! Sign in now"}</p>
       </form>
     </div>
