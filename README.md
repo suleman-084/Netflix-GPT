@@ -17,6 +17,10 @@
 - update profile
 - bugfix: sign up user displayname and profile picture updated
 - bugfix: if the user is not logged in redirect /browse to login page and vice versa
+- unsubscribed to the onauthstatechange call back
+- add hardcoded values to the constant files
+- register tmdb api & craete an app & get the ccess token
+- get data from tmdb now playing movies
 
 
 
