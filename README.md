@@ -15,6 +15,13 @@
 - created redux store with userslice
 - implemented sign out
 - update profile
+- bugfix: sign up user displayname and profile picture updated
+- bugfix: if the user is not logged in redirect /browse to login page and vice versa
+
+
+
+
+
 
 # Features 
 - Login/Sign Up
