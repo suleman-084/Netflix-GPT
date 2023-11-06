@@ -2,4 +2,4 @@ export const  logo = "https://cdn.cookielaw.org/logos/dd6b162f-1a32-456a-9cfe-89
 
 export const background_img = "https://assets.nflxext.com/ffe/siteui/vlv3/dace47b4-a5cb-4368-80fe-c26f3e77d540/f5b52435-458f-498f-9d1d-ccd4f1af9913/IN-en-20231023-popsignuptwoweeks-perspective_alpha_website_large.jpg";
 
-export const PROFILE_PICTURE = "https://media.licdn.com/dms/image/D5603AQHnxXi0WE8oww/profile-displayphoto-shrink_800_800/0/167699454767https://media.licdn.com/dms/image/D5603AQHnxXi0WE8oww/profile-displayphoto-shrink_800_800/0/1676994547678?e=1704326400&v=beta&t=HqpfFtIoncowx1F2z9Pf6maAjMfeP5CzP1eis3HRooo8?e=1704326400&v=beta&t=https://media.licdn.com/dms/image/D5603AQHnxXi0WE8oww/profile-displayphoto-shrink_800_800/0/1676994547678?e=1704326400&v=beta&t=HqpfFtIoncowx1F2z9Pf6maAjMfeP5CzP1eis3HRooo"
+export const PROFILE_PICTURE = "https://wallpapers.com/images/hd/netflix-profile-pictures-1000-x-1000-qo9h82134t9nv0j0.jpg"
