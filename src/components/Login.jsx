@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Header from './Header'
+import Header from "./Header"
 import { background_img, PROFILE_PICTURE } from '../Utils/constants'
 import { checkValidData } from '../Utils/validate'
 import { useRef } from 'react'

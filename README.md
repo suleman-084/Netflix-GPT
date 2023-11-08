@@ -21,6 +21,7 @@
 - add hardcoded values to the constant files
 - register tmdb api & craete an app & get the ccess token
 - get data from tmdb now playing movies
+- added videotrailer and fetch the api
 
 
 
