@@ -66,7 +66,7 @@ const Login = () => {
         .then((userCredential) => {
           // Signed in 
           const user = userCredential.user;
-          // console.log("user", user);
+          console.log("user", user);
 
 
         })
@@ -96,7 +96,7 @@ const Login = () => {
         <input ref={emailRef} type="email" placeholder="Email Address" className="p-4 my-4 w-full bg-[#333333] rounded-lg" />
         <input ref={passwordRef} type="Password" placeholder="Password" className="p-4 my-4  w-full bg-[#333333] rounded-lg" />
         <p className="text-red-500 font-bold text-lg py-2">{errorMessage}</p>
-        <button className="p-4 my-6  bg-red-700 text-white rounded-lg w-full " onClick={handleButtonClick}>{isSignInForm ? "Sign In" : "Sign Up"}</button>
+        <button className="p-4 my-6  bg-red-800 text-white rounded-lg w-full " onClick={handleButtonClick}>{isSignInForm ? "Sign In" : "Sign Up"}</button>
         <p className='py-4 cursor-pointer' onClick={toggleSignInForm}>{isSignInForm ? "New to Netflix? Sign up now" : "Already registered!! Sign in now"}</p>
       </form>
     </div>
