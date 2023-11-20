@@ -22,7 +22,13 @@
 - register tmdb api & craete an app & get the ccess token
 - get data from tmdb now playing movies
 - added videotrailer and fetch the api
-
+- custom hook for now playing movies
+- create movieslice
+- update store with movies data
+- fetch data for trailer video
+- update store with trailer video data
+- embedded the yt video and make it autoplay and mute
+- tailwind classes to make  main container look better
 
 
 
