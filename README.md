@@ -36,7 +36,9 @@
 - tmdb image CDN URL
 - made the browse page amazing using tailwind
 - custom hook for now playing movies
-- GPT search feature
+- GPT search Page
+- GPT search bar
+- (IMP) multi language feature in our gpt search bar
 
 
 
