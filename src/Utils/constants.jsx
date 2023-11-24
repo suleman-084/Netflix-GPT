@@ -31,3 +31,8 @@ export const SUPPORTED_LANGUAGES = [{
   identifier: "kannada",
   name:"Kannada"
 },]
+
+// export const OPENAI_KEY = "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"
+// export const OPENAI_KEY = "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"
+// export const OPENAI_KEY = "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"
+export const OPENAI_KEY = "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"
