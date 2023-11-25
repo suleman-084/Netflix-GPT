@@ -9,9 +9,11 @@ export const API_OPTIONS = {
   method: 'GET',
   headers: {
     accept: 'application/json',
-    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3OTZlODUyOWJhZjg2MTllYWZkMGUxMGI1NTRiZDQyYiIsInN1YiI6IjY1NDg3ODdhOWNjNjdiMDEzYTMyMGI5NyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.GFqU6qcD06jWM4S2RTynAuqPH0Av2q8jF-4mYUrpqk8'
-  }
+    Authorization: 'Bearer ' + process.env.REACT_APP_TMDB_KEY,
+    
+  },
 };
+console.log("object",process.env.REACT_APP_TMDB_KEY)
 
 
 export const IMG_CDN_URL = "https://image.tmdb.org/t/p/w300"
@@ -32,7 +34,5 @@ export const SUPPORTED_LANGUAGES = [{
   name:"Kannada"
 },]
 
-// export const OPENAI_KEY = "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"
-// export const OPENAI_KEY = "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"
-// export const OPENAI_KEY = "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"
-export const OPENAI_KEY = "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"
+
+export const OPENAI_KEY = process.env.REACT_APP_OPENAI_KEY
