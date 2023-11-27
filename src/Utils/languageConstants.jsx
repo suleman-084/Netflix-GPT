@@ -1,18 +1,18 @@
   const lang = {
     "en": {
-        search:"search",
+        Search:"Search",
         gptPlaceHolder:"What would you like to watch today?"
     },
     "hindi": {
-        search:"खोज",
+        Search:"खोज",
         gptPlaceHolder:"आज आप क्या देखना चाहेंगे?"
     },
     "spanish": {
-        search:"buscar",
+        Search:"buscar",
         gptPlaceHolder:"¿Qué te gustaría ver hoy?"
     },
     "kannada": {
-        search:"ಹುಡುಕಿ",
+        Search:"ಹುಡುಕಿ",
         gptPlaceHolder:"ನೀವು ಇಂದು ಏನನ್ನು ವೀಕ್ಷಿಸಲು ಬಯಸುತ್ತೀರಿ?"
     },
 }
