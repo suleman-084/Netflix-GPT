@@ -32,7 +32,7 @@ const GptSearchBar = () => {
     if (!gptResults.choices) {
       console.error("Api limit exceeds");
     }
-    console.log(gptResults.choices?.[0]?.message?.content);
+    // console.log(gptResults.choices?.[0]?.message?.content);
 
 
     const gptMovies = gptResults.choices?.[0]?.message?.content?.split(",")
@@ -40,16 +40,16 @@ const GptSearchBar = () => {
 
     const promiseArray = gptMovies.map(movie => searchMovieTmdb(movie))
     const tmdbResults = await Promise.all(promiseArray)
-    console.log("res", tmdbResults);
+    // console.log("res", tmdbResults);
     dispatch(addGptMovieResult({ movieNames: gptMovies, movieResults: tmdbResults }))
   }
 
 
   return (
-    <div className=' pt-[8%] flex justify-center'>
-      <form className='w-1/2  bg-black grid grid-cols-12 rounded-lg' onSubmit={(e) => e.preventDefault()}>
-        <input ref={searchText} type="text" placeholder={lang[langSelector].gptPlaceHolder} className='p-4 m-4 col-span-9 rounded-lg' />
-        <button className='bg-red-800 text-white rounded-lg col-span-3 py-2 px-4 m-4 ' onClick={handleGptSearchClick}>{lang[langSelector].search}</button>
+    <div className='pt-[45%]  md:pt-[8%]  flex justify-center'>
+      <form className='w-full  md:w-1/2  bg-black grid grid-cols-12 rounded-lg lg:mt-16' onSubmit={(e) => e.preventDefault()}>
+        <input ref={searchText} type="text" placeholder={lang[langSelector].gptPlaceHolder} className='p-2 m-3 md:p-4  lg:p-2  md:text-lg md:m-4  text-sm  col-span-8 md:col-span-9 rounded-lg  focus:outline-none' />
+        <button className='bg-red-800 text-white rounded-lg md:col-span-3 col-span-4 py-2 px-3 m-3  font-semibold text-lg md:text-2xl lg:text-xl' onClick={handleGptSearchClick}>{lang[langSelector].Search}</button>
       </form>
     </div>
   );

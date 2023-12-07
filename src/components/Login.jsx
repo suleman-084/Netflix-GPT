@@ -86,15 +86,15 @@ const Login = () => {
 
   }
   return (
-    <div ><Header />
-      <div className="absolute ">
-        <img src={background_img} alt="Background-image" />
+    <div><Header />
+      <div className="absolute  ">
+        <img className=' h-screen md:h-full  object-cover  ' src={background_img} alt="Background-image" />
       </div>
-      <form onSubmit={(e) => e.preventDefault()} className="absolute w-3/12  p-12 bg-black my-36 mx-auto right-0 left-0 text-white bg-opacity-80" >
-        <h1 className="font-bold text-3xl py-4 ">{isSignInForm ? "Sign In" : "Sign Up"}</h1>
-        {!isSignInForm && <input ref={nameRef} type="text" placeholder="Full Name" className="p-4 my-4 w-full bg-[#333333] rounded-lg" />}
-        <input ref={emailRef} type="email" placeholder="Email Address" className="p-4 my-4 w-full bg-[#333333] rounded-lg" />
-        <input ref={passwordRef} type="Password" placeholder="Password" className="p-4 my-4  w-full bg-[#333333] rounded-lg" />
+      <form onSubmit={(e) => e.preventDefault()} className="absolute  md:w-3/12  p-12 bg-black mt-16 md:mt-20 lg:mt-28 mx-auto right-0 left-0 text-white bg-opacity-80 " >
+        <h1 className="font-bold text-3xl py-4  ">{isSignInForm ? "Sign In" : "Sign Up"}</h1>
+        {!isSignInForm && <input ref={nameRef} type="text" placeholder="Full Name" className="p-4 my-4 w-full bg-[#333333] rounded-lg focus:outline-none" />}
+        <input ref={emailRef} type="email" placeholder="Email Address" className="p-4 my-4 w-full bg-[#333333] rounded-lg focus:outline-none" />
+        <input ref={passwordRef} type="Password" placeholder="Password" className="p-4 my-4  w-full bg-[#333333] rounded-lg focus:outline-none" />
         <p className="text-red-500 font-bold text-lg py-2">{errorMessage}</p>
         <button className="p-4 my-6  bg-red-800 text-white rounded-lg w-full " onClick={handleButtonClick}>{isSignInForm ? "Sign In" : "Sign Up"}</button>
         <p className='py-4 cursor-pointer' onClick={toggleSignInForm}>{isSignInForm ? "New to Netflix? Sign up now" : "Already registered!! Sign in now"}</p>

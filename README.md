@@ -1,4 +1,4 @@
-# Nwtflix GPT 
+# Netflix GPT 
 
 - Create React App
 - Configured tailwind

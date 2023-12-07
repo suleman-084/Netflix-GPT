@@ -3,10 +3,10 @@ import MovieCard from './MovieCard'
 // import MovieCard from './MovieCard'
 
 const MovieList = ({ title, movies }) => {
-    // console.log("tite", movies);
+    console.log("title", movies);
     return (
         <div className=''>
-            <h1 className='text-3xl py-2 text-white '>{title}</h1>
+            <h1 className='text-2xl md:text-3xl py-3 md:pt-[40px] text-white '>{title}</h1>
             <div className='example flex   overflow-x-scroll'>
 
                 <div className='flex'>
