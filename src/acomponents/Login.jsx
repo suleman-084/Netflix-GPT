@@ -66,7 +66,7 @@ const Login = () => {
       signInWithEmailAndPassword(auth, emailRef?.current?.value, passwordRef?.current?.value)
         .then((userCredential) => {
           // Signed in 
-          const user = userCredential.user;
+          // const user = userCredential.user;
           // console.log("user", user);
 
 
@@ -89,7 +89,7 @@ const Login = () => {
   return (
     <div><Header />
       <div className="absolute  ">
-        <img className=' h-screen md:h-full  object-cover  ' src={background_img} alt="Background-image" />
+        <img className=' h-screen md:h-full  object-cover  ' src={background_img} alt="Background" />
       </div>
       <form onSubmit={(e) => e.preventDefault()} className="absolute  md:w-3/12  p-12 bg-black mt-16 md:mt-20  mx-auto right-0 left-0 text-white bg-opacity-80 " >
         <h1 className="font-bold text-3xl py-4  ">{isSignInForm ? "Sign In" : "Sign Up"}</h1>
