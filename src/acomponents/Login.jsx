@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import Header from "./Header"
-import { background_img, PROFILE_PICTURE } from '../Utils/constants'
-import { checkValidData } from '../Utils/validate'
+import { background_img, PROFILE_PICTURE } from '../aUtils/constants'
+import { checkValidData } from '../aUtils/validate'
 import { useRef } from 'react'
-import { auth } from "../Utils/firebase"
+import { auth } from "../aUtils/firebase"
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile} from "firebase/auth";
 
 import { useDispatch } from 'react-redux'
-import { addUser } from '../Utils/userSlice'
+import { addUser } from '../aUtils/userSlice'
 
 
 

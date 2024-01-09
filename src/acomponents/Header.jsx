@@ -1,13 +1,13 @@
 import { React, useEffect } from 'react'
-import { SUPPORTED_LANGUAGES, logo } from "../Utils/constants"
 import { signOut } from "firebase/auth";
-import { auth } from "../Utils/firebase";
 import { useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { addUser, removeUser } from '../Utils/userSlice'
 import { onAuthStateChanged } from "firebase/auth";
-import { toggleGptSearchView } from '../Utils/gptSearchslice';
-import { changeLang } from '../Utils/configSlice';
+import { addUser, removeUser } from '../aUtils/userSlice'
+import { SUPPORTED_LANGUAGES, logo } from "../aUtils/constants"
+import { auth } from "../aUtils/firebase";
+import { toggleGptSearchView } from '../aUtils/gptSearchslice';
+import { changeLang } from '../aUtils/configSlice';
 
 
 
