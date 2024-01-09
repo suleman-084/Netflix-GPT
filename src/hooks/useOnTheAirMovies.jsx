@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
-import {  addOnTheAirMovies } from "../Utils/moviesSlice";
-import { API_OPTIONS } from "../Utils/constants";
+import {  addOnTheAirMovies } from "../aUtils/moviesSlice";
+import { API_OPTIONS } from "../aUtils/constants";
 import { useEffect } from "react";
 
 const useOnTheAirMovies = () => {
