@@ -30,6 +30,7 @@ const Login = () => {
     if (message) return;
     if (!isSignInForm) {
       // console.log("is", isSignInForm);
+      //Sign out form
       //sign up logic
       createUserWithEmailAndPassword(auth, emailRef?.current?.value, passwordRef?.current?.value)
         .then((userCredential) => {
@@ -90,7 +91,7 @@ const Login = () => {
       <div className="absolute  ">
         <img className=' h-screen md:h-full  object-cover  ' src={background_img} alt="Background-image" />
       </div>
-      <form onSubmit={(e) => e.preventDefault()} className="absolute  md:w-3/12  p-12 bg-black mt-16 md:mt-20 lg:mt-28 mx-auto right-0 left-0 text-white bg-opacity-80 " >
+      <form onSubmit={(e) => e.preventDefault()} className="absolute  md:w-3/12  p-12 bg-black mt-16 md:mt-20  mx-auto right-0 left-0 text-white bg-opacity-80 " >
         <h1 className="font-bold text-3xl py-4  ">{isSignInForm ? "Sign In" : "Sign Up"}</h1>
         {!isSignInForm && <input ref={nameRef} type="text" placeholder="Full Name" className="p-4 my-4 w-full bg-[#333333] rounded-lg focus:outline-none" />}
         <input ref={emailRef} type="email" placeholder="Email Address" className="p-4 my-4 w-full bg-[#333333] rounded-lg focus:outline-none" />
