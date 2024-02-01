@@ -1,5 +1,5 @@
 # Netflix GPT  
-Livelink [""https://netflix-gpt-01.netlify.app/]
+Livelink ["https://netflix-gpt-01.netlify.app/"]
 
 - Create React App
 - Configured tailwind
